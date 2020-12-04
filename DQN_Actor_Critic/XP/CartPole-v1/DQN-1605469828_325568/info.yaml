@@ -1,0 +1,9 @@
+env: CartPole-v1
+featExtractor: !!python/name:utils.NothingToDo ''
+freqSave: 1000
+freqTest: 10
+freqVerbose: 10
+fromFile: null
+nbEpisodes: 1000000
+nbTest: 1
+seed: 5
