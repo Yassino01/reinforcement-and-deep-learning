@@ -10,4 +10,3 @@ Ce repository contient le code des TME sur les notions vu en cours d'apprentissa
 * Modèles génératifs & adverses, GAN, VAE
 * Apprentissage par renforcement inverse (apprentissage des fonctions de récompense)
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
-
