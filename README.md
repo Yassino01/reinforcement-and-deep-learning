@@ -28,7 +28,7 @@ Nous avons testé les stratégies suivantes :
 **Dans nos expériences, nous avons fait varier le paramètre λ de régularisation de la régression ridge**.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
+  <img src="UCBvsLinUCB/imgs/baseline.png" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
 </p>
 
 
@@ -40,7 +40,7 @@ Commeon pouvait s’y attendre:
 *  Quant à la stratégie UCB, elle obtient de meilleurs performances.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
+  <img src="UCBvsLinUCB/imgs/UCBs" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
 </p>
 
 
