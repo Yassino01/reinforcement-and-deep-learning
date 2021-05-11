@@ -107,7 +107,7 @@ La méthode Policy gradient optimise directement la stratégie (policy)
 * Un réseaux de neuronnes pour estimer la fonction valeur, et calculer donc l'avantage de suivre pi (Critic).
 
 <p align="center">
-  <img src="ActorCritic/imgs/AC_cartepole.png" width="700" title = "Resultats de Actor Critic sur Cartpole">
+  <img src="ActorCritic/imgs/AC_cartpole.png" width="700" title = "Resultats de Actor Critic sur Cartpole">
 </p>
 
 <p align="center">
