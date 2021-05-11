@@ -48,7 +48,7 @@ Comme on pouvait s’y attendre:
 * On observe que λ influence beaucoup les performances. parmis les valeurs testées (1, 100, 1000), seul la valeur λ= 1000 permet d’avoir des performances supérieurs à UCB.
 
 
-#### Note : Dans la suite les diffirents modèles et stratégies seront évalués sur les environements **Cartpole** et **GrildWorld**(le plus souvent) et on s'intéresse au reward cumulé.
+#### Note : Dans la suite les diffirents modèles et stratégies seront évalués sur les environements **Cartpole**, **Lunar** et **GrildWorld**(le plus souvent) et on s'intéresse au reward cumulé.
 
 <p align="center">
   <img src="grildword.png" width="600" title = "Environement Grilworld RL">
@@ -58,6 +58,9 @@ Comme on pouvait s’y attendre:
   <img src="cartpole.png" width="600" title = "Environement Cartpole RL">
 </p>
 
+<p align="center">
+  <img src="lunar.png" width="600" title = "Environement Lunar RL">
+</p>
 ## Programation dynamique (Value Iteration et Policy Iteration):
 
 **Policy iteration** et **Value iteration** sont des méthodes qui utilise repectivement les équa-tions de Bellman et de Bellman optimal pour faire converger une politique vers la politiqueoptimale lors qu’on dispose d’un MDP connu (ou estimé).
@@ -72,11 +75,43 @@ La figure suivante montre quelques résulats obtenus sur l’un des environnemen
 * On obseve que Policy iteration et value iteration permettent d’obtenir des rewards meilleurs à la politque aléatoire. Les agents obtenus par les deux méthodes donne sensiblement les même rewards. On observe également que plus la valeur du discount est petite plus le nombred’étapes que les agents mettent à terminer un episode l’est aussi.
 
 
-## TD learning : Q-learning.
+## TD learning : Q-learning, Dyna-Q.
 
 
 <p align="center">
-  <img src="q_learning/imgs/grildword_reward.png" width="700" title = "Reward cumulé (grildworld)">
+  <img src="q_learning/imgs/grildword_reward.png" width="700" title = "Reward cumulé (grildworld) Qlearning">
+</p>
+
+## Deep-Qlearning DQN:
+
+Le Q-learning se heurte à certaines limites lorsque le nombre d’états et d’actions est élevéparmis lequelles :
+
+* La mémoire necessaire pour stoker Q
+* La capacité de génralisation.
+
+DQN s’attaque à ces problèmes en utilisant un réseaux de neurones pour approximer les Q-value.La figure suivante  montre les résultats obtenus sur CartPole
+
+<p align="center">
+  <img src="DQN/imgs/DQN_cartepole.png" width="700" title = "Resultats de DQN sur Cartpole">
+</p>
+
+<p align="center">
+  <img src="DQN/imgs/DQN_lunar.png width="700" title = "Resultats de DQN sur LunarLander">
+</p>
+
+## Policy Gradient : Actor Critic
+
+La méthode Policy gradient optimise directement la stratégie (policy)
+
+* Un reseaux de neuronnes pour estimer la policy pi (Actor)
+* Un réseaux de neuronnes pour estimer la fonction valeur, et calculer donc l'avantage de suivre pi (Critic).
+
+<p align="center">
+  <img src="ActorCritic/imgs/AC_cartepole.png" width="700" title = "Resultats de Actor Critic sur Cartpole">
+</p>
+
+<p align="center">
+  <img src="ActorCritic/imgs/AC_lunar.png width="700" title = "Resultats de Actor Critic sur LunarLander">
 </p>
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
