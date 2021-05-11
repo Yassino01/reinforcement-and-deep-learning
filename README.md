@@ -51,11 +51,11 @@ Comme on pouvait s’y attendre:
 #### Note : Dans la suite les diffirents modèles et stratégies seront évalués sur les environements **Cartpole** et **GrildWorld**(le plus souvent) et on s'intéresse au reward cumulé.
 
 <p align="center">
-  <img src="grildword.png" width="960" title = "Environement Grilworld RL">
+  <img src="grildword.png" width="600" title = "Environement Grilworld RL">
 </p>
 
 <p align="center">
-  <img src="cartpole.png" width="960" title = "Environement Cartpole RL">
+  <img src="cartpole.png" width="600" title = "Environement Cartpole RL">
 </p>
 
 ## Programation dynamique (Value Iteration et Policy Iteration):
@@ -66,7 +66,7 @@ La figure suivante montre quelques résulats obtenus sur l’un des environnemen
 
 
 <p align="center">
-  <img src="policy_iteration/imgs/result.JPG" width="960" title = "Environement Cartpole RL">
+  <img src="policy_iteration/imgs/result.JPG" width="600" title = "Environement Cartpole RL">
 </p>
 
 * On obseve que Policy iteration et value iteration permettent d’obtenir des rewards meilleurs à la politque aléatoire. Les agents obtenus par les deux méthodes donne sensiblement les même rewards. On observe également que plus la valeur du discount est petite plus le nombred’étapes que les agents mettent à terminer un episode l’est aussi.
@@ -76,7 +76,7 @@ La figure suivante montre quelques résulats obtenus sur l’un des environnemen
 
 
 <p align="center">
-  <img src="q_learning/imgs/grildword_reward.png" width="960" title = "Reward cumulé (grildworld)">
+  <img src="q_learning/imgs/grildword_reward.png" width="700" title = "Reward cumulé (grildworld)">
 </p>
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
