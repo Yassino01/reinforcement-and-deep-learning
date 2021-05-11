@@ -28,7 +28,7 @@ Nous avons testé les stratégies suivantes :
 **Dans nos expériences, nous avons fait varier le paramètre λ de régularisation de la régression ridge**.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/baseline.png" width="960" title = "Résultats obtenus par les stratégie Random, StaticBest, UCB">
+  <img src="UCBvsLinUCB/imgs/baseline.png" width="1200" title = "Résultats obtenus par les stratégie Random, StaticBest, UCB">
 </p>
 
 
@@ -40,7 +40,7 @@ Comme on pouvait s’y attendre:
 *  Quant à la stratégie UCB, elle obtient de meilleurs performances.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/UCBs.png" width="960" Résultats obtenus par les stratégies UCB et LinUCB">
+  <img src="UCBvsLinUCB/imgs/UCBs.png" width="1200" Résultats obtenus par les stratégies UCB et LinUCB">
 </p>
 
 
@@ -112,6 +112,16 @@ La méthode Policy gradient optimise directement la stratégie (policy)
 
 <p align="center">
   <img src="ActorCritic/imgs/AC_lunar.png" width="700" title = "Resultats de Actor Critic sur LunarLander" >
+</p>
+
+## Advanced Policy Gradient : PPO
+
+<p align="center">
+  <img src="PPO/imgs/ppo_cartPole_v1.png" width="700" title = "Resultats de PPO sur CartPole" >
+</p>
+
+<p align="center">
+  <img src="PPO/imgs/ppo_LunarLander.png" width="700" title = "Resultats de PPO sur LunarLander" >
 </p>
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
