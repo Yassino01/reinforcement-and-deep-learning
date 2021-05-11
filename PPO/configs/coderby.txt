@@ -1,0 +1,108 @@
+import re
+def ArrayChallenge(strArr):
+
+  fathers=[int(m.group(2)) for m in [re.match("\((\d+),(\d+)\)",e) for e in strArr]]
+  #print("fathers",fathers)
+  for e in  fathers:
+    if fathers.count(e)>2:
+      return "false"
+
+  for i,e in enumerate(strArr):
+    m=re.match("\((\d+),(\d+)\)",e)
+    son=int(m.group(1))
+    father=int(m.group(2))
+    left=son < father
+    right=father < son
+
+    for next_son in strArr[i+1:]:
+      m=re.match("\((\d+),(\d+)\)",next_son)
+      son2=int(m.group(1))
+      father2=int(m.group(2))
+      if(father==father2):
+        left2=son2 < father
+        right2=father < son2
+        if(left2 ==  left or right2 == right):
+          print(father,father2,son,son2,right,right2,left,left2)
+          return 'false'
+    return 'true'
+
+
+
+  # code goes here
+  return strArr
+
+# keep this function call here 
+print(ArrayChallenge(input()))
+
+
+
+
+def ArrayChallenge(l):
+  
+  answer=[-1]
+  for i in range(1,len(l)):
+    minim=min(l[:i])
+    if(l[i]>=minim):
+      inv=l[i::-1]
+      #print("element",l[i])
+      #print("inv",inv[1:])
+      for e in inv[1:]:
+        if e<=l[i]:
+          nearest=e
+          break
+    else:
+      nearest=-1
+    answer.append(nearest)
+  return answer
+
+# keep this function call here 
+print(ArrayChallenge(input()))
+
+
+def ArrayChallenge(l):
+
+  high_profit=-1
+  for i in range(len(l)):
+    if i!=len(l)-1:
+      x=l[i]
+      y=max(l[i+1:])
+      profit=y-x
+      if profit > high_profit:
+        high_profit=profit
+
+  return high_profit
+
+# keep this function call here 
+print(ArrayChallenge(input()))
+
+
+
+def sub_lists(l):
+  base=[]
+  lists=[base]
+  for i in range(len(l)):
+    origin=lists[:]
+    new=l[i]
+    for j in range(len(lists)):
+      lists[j]=lists[j]+[new]
+    lists=origin+lists
+  return lists
+
+
+def ArrayChallenge(arr):
+
+  copy=arr.copy()
+  copy=sorted(copy)
+  max_elem=copy.pop()
+  sub_lists_elems=sub_lists(copy)
+
+  answer = False
+  for l in sub_lists_elems:
+    if(sum(l)==max_elem):
+      answer=True
+
+  return answer
+
+array=input()
+# keep this function call here 
+print(ArrayChallenge(array))
