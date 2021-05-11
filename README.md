@@ -107,6 +107,11 @@ La méthode Policy gradient optimise directement la stratégie (policy)
 * Un réseaux de neuronnes pour estimer la fonction valeur, et calculer donc l'avantage de suivre pi (Critic).
 
 <p align="center">
+  <img src="ActorCritic/imgs/ac_alogo.png" width="500" title = "Batch Actor Critic">
+</p>
+
+
+<p align="center">
   <img src="ActorCritic/imgs/AC_cartpole.png" width="700" title = "Resultats de Actor Critic sur Cartpole">
 </p>
 
@@ -123,6 +128,13 @@ La méthode Policy gradient optimise directement la stratégie (policy)
 <p align="center">
   <img src="PPO/imgs/ppo_LunarLander.png" width="700" title = "Resultats de PPO sur LunarLander" >
 </p>
+
+## Deep Deterministic Policy Gradient DDPG:
+
+<p align="center">
+  <img src="DDPG/imgs/DPPG_pendulum.png" width="700" title = "Resultats de DDPG" >
+</p>
+
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
 
