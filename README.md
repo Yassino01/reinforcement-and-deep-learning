@@ -96,7 +96,7 @@ DQN s’attaque à ces problèmes en utilisant un réseaux de neurones pour appr
 </p>
 
 <p align="center">
-  <img src="DQN/imgs/DQN_lunar.png width="700" title = "Resultats de DQN sur LunarLander">
+  <img src="DQN/imgs/DQN_lunar.png" width="700" title = "Resultats de DQN sur LunarLander">
 </p>
 
 ## Policy Gradient : Actor Critic
@@ -111,7 +111,7 @@ La méthode Policy gradient optimise directement la stratégie (policy)
 </p>
 
 <p align="center">
-  <img src="ActorCritic/imgs/AC_lunar.png width="700" title = "Resultats de Actor Critic sur LunarLander">
+  <img src="ActorCritic/imgs/AC_lunar.png" width="700" title = "Resultats de Actor Critic sur LunarLander" >
 </p>
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
