@@ -28,19 +28,19 @@ Nous avons testé les stratégies suivantes :
 **Dans nos expériences, nous avons fait varier le paramètre λ de régularisation de la régression ridge**.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/baseline.png" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
+  <img src="UCBvsLinUCB/imgs/baseline.png" width="960" title = "Résultats obtenus par les stratégie Random, StaticBest, UCB">
 </p>
 
 
 
-Commeon pouvait s’y attendre:
+Comme on pouvait s’y attendre:
 
 * la stratégie Random sélectionne la meilleur pub qu’une fois sur 10.
 * La stratigie StaticBest à de très mauvaise performances car au départ toutes les pub ont untaux de clics cumulé nulle. et comme le taux de clics est toujours positif, la stratégie révientà choisir une pub aléatoirement puis à toujours l’afficher.
 *  Quant à la stratégie UCB, elle obtient de meilleurs performances.
 
 <p align="center">
-  <img src="UCBvsLinUCB/imgs/UCBs.png" width="960" Résultats obtenus par les stratégie Random, StaticBest, UCB">
+  <img src="UCBvsLinUCB/imgs/UCBs.png" width="960" Résultats obtenus par les stratégies UCB et LinUCB">
 </p>
 
 
@@ -48,10 +48,29 @@ Commeon pouvait s’y attendre:
 * On observe que λ influence beaucoup les performances. parmis les valeurs testées (1, 100, 1000), seul la valeur λ= 1000 permet d’avoir des performances supérieurs à UCB.
 
 
-* Apprentissage par renforcement (TD-lambda, Q learning, …)
-* Apprentissage profond pour le renforcement (Deep Q learning, Policy gradient, Reinforce, Actor critic, DDPG, TRPO)
-* Apprentissage par imitation
-* Apprentissage par renforcement inverse (apprentissage des fonctions de récompense)
+#### Note : Dans la suite les diffirents modèles et stratégies seront évalués sur les environements **Cartpole** et **GrildWorld**(le plus souvent) et on s'intéresse au reward cumulé.
+
+<p align="center">
+  <img src="grildworld.png" width="960" title = "Environement Grilworld RL">
+</p>
+
+<p align="center">
+  <img src="cartpole.png" width="960" title = "Environement Cartpole RL">
+</p>
+
+## Programation dynamique (Value Iteration et Policy Iteration):
+
+**Policy iteration** et **Value iteration** sont des méthodes qui utilise repectivement les équa-tions de Bellman et de Bellman optimal pour faire converger une politique vers la politiqueoptimale lors qu’on dispose d’un MDP connu (ou estimé).
+
+La figure suivante montre quelques résulats obtenus sur l’un des environnements GridWorld. 
+
+
+<p align="center">
+  <img src="policy_iteration/imgs/result.JPG" width="960" title = "Environement Cartpole RL">
+</p>
+
+* On obseve que Policy iteration et value iteration permettent d’obtenir des rewards meilleurs à la politque aléatoire. Les agents obtenus par les deux méthodes donne sensiblement les même rewards. On observe également que plus la valeur du discount est petite plus le nombred’étapes que les agents mettent à terminer un episode l’est aussi.
+
 
 * Curriculum learning, reward shaping (apprentissage incrémental: de sous tâches plus simples vers la tâche finale)
 
